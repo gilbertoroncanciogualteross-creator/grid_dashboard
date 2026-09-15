@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,20 @@
             <div class="card">4</div>
             <div class="card">5</div>
             <div class="card">6</div>
+            <button id="theme-toggle">Change the theme</button>
         </main>
     </div>
 </body>
 </html>
+
+<script>
+    const btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', () => {
+        if(document.documentElement.dataset.theme === "light"){
+            document.documentElement.dataset.theme = "dark";
+        }
+        else if(document.documentElement.dataset.theme === "dark") {
+            document.documentElement.dataset.theme = "light";
+        }
+    });
+</script>
