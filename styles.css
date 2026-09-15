@@ -1,5 +1,23 @@
-.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
+:root {
+    --color-bg: #ffffff;
+    --color-surface: #f5f5f5;
+    --color-text: #333333;
+    --color-border: #e0e0e0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.header { 
+    grid-area: header;
+    background-color: var(--color-surface);
+ }
+.sidebar { 
+    grid-area: sidebar; 
+    background-color: var(--color-surface);
+}
 .content { grid-area: content; }
 
 .dashboard {
@@ -14,4 +32,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
+    background-color: var(--color-bg);
+    padding: 10px;
+}
+
+.card {
+    background-color: var(--color-surface);
+    padding: 10px;
+    border: 1px solid var(--color-border);
 }
